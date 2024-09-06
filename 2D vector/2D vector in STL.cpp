@@ -1,4 +1,4 @@
-
+//2D vector in STL
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -23,3 +23,7 @@ int main()
 
     return 0;
 }
+
+output:->
+2 3 4 
+2 3 4 5 6 
