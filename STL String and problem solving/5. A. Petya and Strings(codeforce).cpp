@@ -1,5 +1,5 @@
 
-                                                 A. Petya and Strings
+                    /*                             A. Petya and Strings
                                             time limit per test2 seconds
                                          memory limit per test256 megabytes
 Little Petya loves presents. His mum bought him two strings of the same size for his birthday. The strings consist of uppercase and
@@ -34,6 +34,9 @@ Output
 1
 Note
 If you want more formal information about the lexicographical order (also known as the "dictionary order" or "alphabetical order"), you can 
-visit the following site:
+visit the following site:*/
+
+
+
 
 
