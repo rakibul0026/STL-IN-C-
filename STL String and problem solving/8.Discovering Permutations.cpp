@@ -39,4 +39,35 @@ ABCDEFHIJG
 
   */
 
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+    
+    for (int t = 1; t <= T; ++t) {
+        int N, K;
+        cin >> N >> K;
+        
+        string s = "";
+        for (int i = 0; i < N; ++i) {
+            s += 'A' + i;  // Create the string of first N letters
+        }
+        
+        cout << "Case " << t << ":\n";
+        
+        int count = 0;
+        do {
+            cout << s << endl;
+            count++;
+            if (count == K) break;  // Stop after printing K permutations
+        } while (next_permutation(s.begin(), s.end()));
+    }
+    
+    return 0;
+}
+
+
 
