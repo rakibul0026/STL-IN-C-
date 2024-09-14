@@ -1,8 +1,31 @@
-//{ Driver Code Starts
+/*T                                             wice Counter
+
+Given a list of N words. Count the number of words that appear exactly twice in the list.
+
+Example 1:
+
+Input:
+N = 3
+list = {Geeks, For, Geeks}
+
+Output: 1
+Explanation: 'Geeks' is the only word that 
+appears twice. 
+Example 2:
+
+Input:
+N = 8
+list = {Tom, Jerry, Thomas, Tom, Jerry, 
+Courage, Tom, Courage}
+
+Output: 2
+Explanation: 'Jerry' and 'Courage' are the 
+only words that appears twice. */
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
-
-// } Driver Code Ends
 
 class Solution {
 public:
@@ -25,9 +48,6 @@ public:
     }
 };
 
-   
-
-//{ Driver Code Starts.
 int main()
 {
     int t;
