@@ -8,26 +8,26 @@ int main()
 
     string tmp;
     vector < string > v;
-    for( auto i : s){
-        if( isspace(i) ){
+    for( auto u : s){
+        if( isspace(u) ){
             v.push_back( tmp );
             tmp.clear();
         }
-        else tmp += i;
+        else tmp += u;
     }
     v.push_back( tmp );
 
-    map < string, int > m;
+    map < string, int > cnt;
     int maxFrq = 0;
-    for( auto i : v ){
-        m[i]++;
-        maxFrq = max ( maxFrq, m[i] );
+    for( auto u : v ){
+        cnt[u]++;
+        maxFrq = max ( maxFrq, cnt[u] );
     }
 
     string ans;
-    for( auto i : m){
-        if( i.second == maxFrq ){
-            ans = i.first;
+    for( auto u :v ){
+        if( cnt[u] == maxFrq ){
+            ans = u;
             break;
         }
     }
