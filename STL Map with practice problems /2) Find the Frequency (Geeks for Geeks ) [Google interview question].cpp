@@ -1,3 +1,31 @@
+/*                                               Find the Frequency
+
+Given an Array Arr of N positive integers and an integer X. Return the frequency of X in the array.
+
+ 
+
+Example 1:
+
+Input:
+N = 5
+Arr = {1, 1, 1, 1, 1}
+X = 1
+Output: 
+5
+Explanation: Frequency of 1 is 5.
+
+Example 2:
+
+Input:
+N = 6
+Arr = {1, 2, 3, 3, 2, 1}
+X = 2
+Output: 
+2
+
+ 
+*/
+
 //{ Driver Code Starts
 //Initial Template for C++
 #include <bits/stdc++.h>
