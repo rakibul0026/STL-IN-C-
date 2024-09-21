@@ -1,64 +1,80 @@
-/*
-Design a data-structure SpecialStack (using the STL of stack) that supports all the stack operations like push(), pop(), isEmpty(), 
-isFull() and an additional operation getMin() which should return minimum element from the SpecialStack. Your task is to complete all the 
-functions, using stack data-Structure.
+/*Special Stack
+Difficulty: EasyAccuracy: 59.15%Submissions: 86K+Points: 2
+Design a data-structure SpecialStack that supports all the stack operations like push(), pop(), isEmpty(), isFull() and an additional operation getMin() which should return the minimum element from the SpecialStack. Your task is to complete all the functions, using a stack data structure.
 
-Input Format:
-The first line of input contains an integer T denoting the no of test cases. Then T test cases follow. Each test case contains two lines.
-The first line of input contains an integer n denoting the number of integers in a sequence. In the second line are n space separated
-integers of the stack.
+Note: The output of the code will be the value returned by getMin() function.
 
-Output Format:
-For each testcase, in a new line, print the minimum integer from the stack. 
+Examples:
 
-Your Task:
-Since this is a function problem, you don't need to take inputs. Just complete the provided functions.
+Input: stack: 18 19 29 15 16
+Output: 15
+Explanation: The minimum element of the stack is 15.
+Input: stack: 34 335 1814 86
+Output: 34
+Explanation: The minimum element of the stack is 34.*/
 
-Constraints:
-1 <= T <= 100
-1 <= N <= 100
-
-Example:
-Input:
-1
-5
-18 19 29 15 16
-Output:
-15
-*/
-
-
-void push(int a)
-{
-   s.push(a);
+//{ Driver Code Starts
+#include<iostream>
+#include<stack>
+using namespace std;
+void push(stack<int>& s,int a);
+bool isFull(stack<int>& s,int n);
+bool isEmpty(stack<int>& s);
+int pop(stack<int>& s);
+int getMin(stack<int>& s);
+//This is the STL stack (http://quiz.geeksforgeeks.org/stack-container-adaptors-the-c-standard-template-library-stl/).
+stack<int> s;
+int main(){
+	int t;
+	cin>>t;
+	while(t--){
+		int n,a;
+		cin>>n;
+		while(!isEmpty(s)){
+		    pop(s);
+		}
+		while(!isFull(s,n)){
+			cin>>a;
+			push(s,a);
+		}
+		cout<<getMin(s)<<endl;
+	}
 }
-bool isFull(int n)
-{
- if(s.size()==n) return true;
- else return false;
+// } Driver Code Ends
+
+
+void push(stack<int>& s, int a){
+	   s.push(a);
 }
-bool isEmpty()
-{
-    return s.empty();
+
+bool isFull(stack<int>& s,int n){
+  return s.size() == n;
 }
-int pop()
-{
-    if(!s.empty()){
-   int x=s.top();
-   s.pop();
-   return x;
+
+bool isEmpty(stack<int>& s){
+    return s.empty(); 
+}
+
+int pop(stack<int>& s){
+ if(!s.empty()) {
+        int x = s.top(); 
+        s.pop();          
+        return x;       
     }
-else return -1;
+    return -1;
 }
-int getMin()
-{
-   int min=s.top();
-   s.pop();
-   while(!s.empty()){
-       if(min>s.top()){
-           min=s.top();
-       }
-       s.pop();
-   }
- return min;
+
+int getMin(stack<int>& s){
+ stack<int> temp = s;
+    int min = temp.top(); 
+    temp.pop();            
+
+    while(!temp.empty()) {
+        if(min > temp.top()) {
+            min = temp.top();  
+        }
+        temp.pop();  
+    }
+
+    return min; 
 }
