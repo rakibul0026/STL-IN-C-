@@ -1,10 +1,10 @@
-/**/
 
-
-
-
-
-
+/*   Input:
+     2
+     4
+     1 6 3 20
+     3
+     2 2 2    */
 
 #include <iostream>
 #include <queue>
